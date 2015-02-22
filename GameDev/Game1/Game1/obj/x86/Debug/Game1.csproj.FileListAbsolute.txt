@@ -1,0 +1,6 @@
+C:\Users\laurent\Desktop\apps\Code\GameDev\GameDev\Game1\Game1\bin\x86\Debug\Game1.exe
+C:\Users\laurent\Desktop\apps\Code\GameDev\GameDev\Game1\Game1\bin\x86\Debug\Game1.pdb
+C:\Users\laurent\Desktop\apps\Code\GameDev\GameDev\Game1\Game1\obj\x86\Debug\Game1.csprojResolveAssemblyReference.cache
+C:\Users\laurent\Desktop\apps\Code\GameDev\GameDev\Game1\Game1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\laurent\Desktop\apps\Code\GameDev\GameDev\Game1\Game1\obj\x86\Debug\Game1.exe
+C:\Users\laurent\Desktop\apps\Code\GameDev\GameDev\Game1\Game1\obj\x86\Debug\Game1.pdb
