@@ -18,7 +18,7 @@ namespace ProgrammingAssignment3
         // drawing support
         Texture2D sprite;
         Rectangle drawRectangle;
-
+        Random rand;
         // moving support
         Vector2 velocity;
 
@@ -53,6 +53,7 @@ namespace ProgrammingAssignment3
 
             // save velocity
             this.velocity = velocity;
+            rand = new Random();
         }
 
         #endregion
@@ -96,6 +97,7 @@ namespace ProgrammingAssignment3
                     // STUDENTS: Update the rock's location
                     drawRectangle.X += (int)(velocity.X * gameTime.ElapsedGameTime.Milliseconds);
                     drawRectangle.Y += (int)(velocity.Y * gameTime.ElapsedGameTime.Milliseconds);
+                    
                 }
 
 
@@ -120,7 +122,12 @@ namespace ProgrammingAssignment3
             // STUDENTS: Only draw the rock if it's inside the window
             if (!OutsideWindow)
             {
+                Color c;
+                Color[] colors={Color.Aqua,Color.Red,Color.Green,Color.Blue,Color.Yellow};
+                c = colors[rand.Next(5)];
+                Console.WriteLine(sprite.Name);
                 spriteBatch.Draw(sprite, drawRectangle, Color.White);
+                
                 // STUDENTS: Draw the rock
                 // Caution: Don't include spriteBatch.Begin or spriteBatch.End here
             }

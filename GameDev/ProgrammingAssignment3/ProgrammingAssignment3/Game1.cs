@@ -18,6 +18,8 @@ namespace ProgrammingAssignment3
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        SoundEffectInstance soundnstance;
+        SoundEffect sound;
 
         const int WINDOW_WIDTH = 800;
         const int WINDOW_HEIGHT = 600;
@@ -79,6 +81,8 @@ namespace ProgrammingAssignment3
             rockSprite2 = Content.Load<Texture2D>("magentarock");
             // STUDENTS: Create a new random rock by calling the GetRandomRock method
             rock0 = GetRandomRock();
+            sound = Content.Load<SoundEffect>("Bomb");
+            soundnstance = sound.CreateInstance();
         }
 
         /// <summary>
@@ -118,13 +122,29 @@ namespace ProgrammingAssignment3
                 // restart timer
                 elapsedDelayMilliseconds = 0;
             }
+            if (gameTime.TotalGameTime.Milliseconds > 30000) {
+                this.Exit();
+            }
 
             // STUDENTS: Check each rock to see if it's outside the window. If so
             // spawn a new random rock for it by calling the GetRandomRock method
             // Caution: Only check the property if the variable isn't null
-            if (rock0 != null&& rock0.OutsideWindow) rock0 = GetRandomRock();
-            if (rock1 != null && rock1.OutsideWindow) rock1 = GetRandomRock();
-            if (rock2 != null && rock2.OutsideWindow) rock2 = GetRandomRock();
+            if (rock0 != null && rock0.OutsideWindow) {
+                //sound.Play();
+                rock0 = GetRandomRock();
+                soundnstance.Play();
+                
+            }
+            if (rock1 != null && rock1.OutsideWindow)
+            {
+                soundnstance.Play();
+                rock1 = GetRandomRock();
+            }
+            if (rock2 != null && rock2.OutsideWindow)
+            {
+                soundnstance.Play();
+                rock2 = GetRandomRock();
+            }
             base.Update(gameTime);
         }
 

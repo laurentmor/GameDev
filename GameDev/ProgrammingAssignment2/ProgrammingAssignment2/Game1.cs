@@ -128,9 +128,12 @@ namespace ProgrammingAssignment2
                 drawRectangle.Height = currentSprite.Height;
                 drawRectangle.Width = currentSprite.Width;
 
+                drawRectangle.X = WINDOW_WIDTH / 2 - currentSprite.Width / 2;
+                drawRectangle.Y = WINDOW_HEIGHT / 2 - currentSprite.Height / 2;
+
                //Setting sprite container location
-                drawRectangle.X = WINDOW_WIDTH / 2;
-                drawRectangle.Y = WINDOW_HEIGHT / 2;
+                //drawRectangle.X = WINDOW_WIDTH / 2;
+                //drawRectangle.Y = WINDOW_HEIGHT / 2;
 
 
                //Setting ball speed
